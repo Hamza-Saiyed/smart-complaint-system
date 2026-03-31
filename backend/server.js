@@ -34,13 +34,23 @@ const io = require('socket.io')(server, {
 // Make io accessible to controllers
 app.set('io', io);
 
+// =====================================================
+// HEALTH CHECK — must be FIRST before all middleware
+// =====================================================
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'OK', database: 'Supabase (PostgreSQL)', timestamp: new Date().toISOString() });
+});
+app.get('/', (req, res) => {
+  res.status(200).json({ status: 'OK', message: 'Smart Complaint System API' });
+});
+
 // Global Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
-  credentials: true
+  origin: '*',
+  credentials: false
 }));
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
