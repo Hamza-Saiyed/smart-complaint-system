@@ -1,0 +1,57 @@
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0* Host smart-complaint-system-jlvf.onrender.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 216.24.57.251, 216.24.57.7
+*   Trying 216.24.57.251:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to smart-complaint-system-jlvf.onrender.com (216.24.57.251 port 443) from 192.168.1.44 port 54814 
+* using HTTP/1.x
+> GET / HTTP/1.1
+
+> Host: smart-complaint-system-jlvf.onrender.com
+
+> User-Agent: curl/8.18.0
+
+> Accept: */*
+
+> 
+
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 404 Not Found
+
+< Date: Wed, 01 Apr 2026 13:21:11 GMT
+
+< Content-Type: text/plain; charset=utf-8
+
+< Content-Length: 10
+
+< Connection: keep-alive
+
+< x-content-type-options: nosniff
+
+< x-render-routing: no-server
+
+< cf-cache-status: DYNAMIC
+
+< Server: cloudflare
+
+< CF-RAY: 9e57e53baa3e2e84-HYD
+
+< alt-svc: h3=":443"; ma=86400
+
+< 
+
+{ [10 bytes data]
+
+100     10 100     10   0      0     21      0                              0
+100     10 100     10   0      0     21      0                              0
+Not Found
+100     10 100     10   0      0     21      0                              0
+* Connection #0 to host smart-complaint-system-jlvf.onrender.com:443 left intact
