@@ -5,6 +5,7 @@
 **Version**: `2.0 Cinematic`
 
 ## Recent Actions
+- Fixed 'Manage Users' page field mapping preventing user activation and status rendering.
 - Fixed Vercel routing 404 on page refresh by adding rewrites rule to vercel.json.
 - Built rigorous robust Server using Socket.io and express-rate-limit.
 - Designed complex Mongoose schemas (Users, Complaints, Votes, Comments, Notifications, ActivityLogs).

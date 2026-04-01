@@ -23,7 +23,13 @@ const ManageUsers = () => {
       const { data } = await api.get('/users', {
         params: { page, limit: 10, search, role: roleFilter }
       });
-      setUsers(data.data);
+      const mappedData = data.data.map(u => ({
+        ...u,
+        _id: u._id || u.id,
+        isActive: u.isActive !== undefined ? u.isActive : u.is_active,
+        createdAt: u.createdAt || u.created_at
+      }));
+      setUsers(mappedData);
       setPages(data.pages);
     } catch (err) {
       toast.error('Failed to load users');
